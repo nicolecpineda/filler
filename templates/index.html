@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        
+        <script src="../static/game.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <div class= "container">
+            <div class="row header">Filler: a Multiplayer Game</div>
+            <div class="row">
+                <div class="col-3 p1_col">
+                    <div class="row p1_tag">
+                        <div id="p1_score"></div> Player 1
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="board"></div>
+                </div>
+                <div class="col-3 p2_col">
+                    <div class="row p2_tag">
+                        Player 2 <div id="p2_score"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row buttons"></div>
+            <div class="p1_turn arrow1"></div>
+            <div class="p2_turn"></div>
+        </div>
+        <div class="helptext">
+            <h4>Rules:</h4>
+            <p>1. Each player is assigned a corner tile at the start of the game</p>
+            <p>2. Playes take turns filling their tiles with one of 6 colors in an attempt to capture adjacent tiles of the same color</p>
+            <p>3. You are not allowed to change the color of your tiles into the color of your opponent's tiles</p>
+            <p>4. The game ends when there are no more tiles to occupy</p>
+            <h4>Goal:</h4>
+            <p>Player who managed to capture most tiles wins.</p>
+        </div>
+        <div class="help">?</div>
+    </body>
+</html>
