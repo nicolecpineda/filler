@@ -7,11 +7,16 @@
     margin: 20px auto 20px auto;
     font-size: 50px;
     font-weight: bold;
+    justify-content: center;
+}
+
+.main {
+    justify-content: center;
 }
 
 .board {
-    margin: 0 auto;
-    width: 500px;
+    max-width: 500px;
+    margin: 0 auto 0 auto;
 }
 
 .board_row {
@@ -33,7 +38,6 @@
 .buttons {
     margin: 40px auto 0px auto;
     width: 500px;
-    height: 35px;
 }
 
 .active {
@@ -49,18 +53,16 @@
     cursor: default;
 }
 
-.col-3 {
-    font-size: 25px;
-    width: 220px;
-}
-
 .p1_tag {
+    font-size: 25px;
     margin-top: 420px;
-    margin-left: 80px;
+    float: right;
+    padding-right: 20px;
 }
 
 .p2_tag {
-    margin: auto;
+    font-size: 25px;
+    padding-left: 20px;
 }
 
 #p1_score, #p2_score {
@@ -79,7 +81,7 @@
     border: 2px solid black;
     border-left: 0;
     border-top: 0;
-    margin-top: -100px;
+    margin-top: 13px;
     transform: rotate(315deg);
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -87,9 +89,9 @@
 }
 
 @keyframes slide1 {
-    from {margin-left: 35px;}
-    50% {margin-left: 55px;}
-    to {margin-left: 35px;}
+    from {margin-right: 10px;}
+    50% {margin-right: 30px;}
+    to {margin-right: 10px;}
 }
 
 .arrow2 {
@@ -98,17 +100,17 @@
     border: 2px solid black;
     border-left: 0;
     border-top: 0;
+    margin-top: 9px;
     transform: rotate(135deg);
-    margin-top: -523px;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-name: slide2;
 }
 
 @keyframes slide2 {
-    from {margin-left: 1060px;}
-    50% {margin-left: 1040px;}
-    to {margin-left: 1060px;}
+    from {margin-left: 10px;}
+    50% {margin-left: 30px;}
+    to {margin-left: 10px;}
 }
 
 .help {
@@ -121,7 +123,9 @@
     font-weight: bold;
     font-size: 30px;
     margin-left: 30px;
-    margin-top: 20px;
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 20px;
 }
 
 .helptext {
@@ -131,10 +135,11 @@
     width: 400px;
     display: none;
     z-index: 100;
-    margin-top: -400px;
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 90px;
     margin-left: 20px;
     font-size: 15px;
-    position: absolute;
     padding: 15px;
 }    
 
@@ -157,4 +162,42 @@
 
 .playagain:hover {
     transform: scale(1.1) perspective(1px)
+}
+
+@media all and (max-width: 1200px) {
+    .board {margin-top: 20px; max-width: 400px;}
+    .board_row {height: 30.4px;}
+    .buttons {width: 450px;}
+    .active {height: 54px; border: 4px solid white;}
+    .inactive {border: 4px solid white; height: 27px;}
+    .p1_tag {font-size: 20px; margin-top: 355px;}
+    .p2_tag {font-size: 20px; margin-top: 20px;}
+    .arrow1 {width: 13px; height: 13px; margin-top: 10px;}
+    .arrow2 {width: 13px; height: 13px; margin-top: 7px;}
+    .winner {font-size: 30px;} 
+}
+
+@media all and (max-width: 992px) {
+    .board {width: 500px;}
+    .board_row {height: 32px;}
+    .buttons {padding-top: 40px; width: 500px;}
+    .active {height: 60px; border: 4px solid white;}
+    .inactive {border: 5px solid white; height: 30px;}
+    .p1_tag {position: fixed; z-index: 100; right: 60%; margin-top: 425px;}
+    .p2_tag {position: fixed; z-index: 100; left: 60%;}
+    .arrow1 {width: 13px; height: 13px; margin-top: 10px;}
+    .arrow2 {width: 13px; height: 13px; margin-top: 7px;}
+}
+
+@media all and (max-width: 700px) {
+    .header {font-size: 40px;}
+    .board {margin-top: 0px;}
+    .buttons {padding-top: 40px; width: 450px;}
+    .p1_tag {margin-top: 405px;} 
+    .playagain {width: 160px; font-size: 20px; padding: 8px;}
+}
+
+@media all and (max-width: 600px) {
+    .p1_tag {right: 55%; margin-top: 405px;}
+    .p2_tag {left: 55%;}
 }

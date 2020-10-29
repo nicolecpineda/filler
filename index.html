@@ -8,27 +8,28 @@
         <link rel="stylesheet" href="./styles/index.css" />
     </head>
     <body>
-        <div class= "container">
+        <div class= "container-fluid">
             <div class="row header">Filler: a Multiplayer Game</div>
-            <div class="row">
-                <div class="col-3 p1_col">
+            <div class="row main">
+                <div class="col-lg-3 p1_col">
                     <div class="row p1_tag">
+                        <div class="p1_turn arrow1"></div>
                         <div id="p1_score"></div> Player 1
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-5">
                     <div class="board"></div>
                 </div>
-                <div class="col-3 p2_col">
+                <div class="col-lg-3 p2_col">
                     <div class="row p2_tag">
                         Player 2 <div id="p2_score"></div>
+                        <div class="p2_turn"></div>
                     </div>
                 </div>
             </div>
             <div class="row buttons"></div>
-            <div class="p1_turn arrow1"></div>
-            <div class="p2_turn"></div>
         </div>
+        <div class="help">?</div>
         <div class="helptext">
             <h4>Rules:</h4>
             <p>1. Each player is assigned a corner tile at the start of the game</p>
@@ -38,6 +39,5 @@
             <h4>Goal:</h4>
             <p>Player who managed to capture most tiles wins.</p>
         </div>
-        <div class="help">?</div>
     </body>
 </html>
