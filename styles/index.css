@@ -1,4 +1,4 @@
-.container {
+.container-fluid {
     display: grid;
     width: 100%;
 }
@@ -93,6 +93,16 @@
     50% {margin-right: 30px;}
     to {margin-right: 10px;}
 }
+@keyframes slide1less {
+    from {margin-right: 0px;}
+    50% {margin-right: 20px;}
+    to {margin-right: 0px;}
+}
+@keyframes slide1evenless {
+    from {margin-right: -5px;}
+    50% {margin-right: 10px;}
+    to {margin-right: -5px;}
+}
 
 .arrow2 {
     width: 15px;
@@ -111,6 +121,16 @@
     from {margin-left: 10px;}
     50% {margin-left: 30px;}
     to {margin-left: 10px;}
+}
+@keyframes slide2less {
+    from {margin-left: 0px;}
+    50% {margin-left: 20px;}
+    to {margin-left: 0px;}
+}
+@keyframes slide2evenless {
+    from {margin-left: -5px;}
+    50% {margin-left: 10px;}
+    to {margin-left: -5px;}
 }
 
 .help {
@@ -200,4 +220,24 @@
 @media all and (max-width: 600px) {
     .p1_tag {right: 55%; margin-top: 405px;}
     .p2_tag {left: 55%;}
+}
+
+@media all and (max-width: 500px) {
+    .header {font-size: 35px;}
+    .board {max-width: 390px;}
+    .board_row {height: 29.64px;}
+    .p1_tag {margin-top: 377px;}
+    .arrow1 {animation-name: slide1less;}
+    .arrow2 {animation-name: slide2less;}
+    .buttons {width: 380px;}
+    .active {height: 48px;}
+    .winner, .playbtn {padding: 0;}
+}
+
+@media all and (max-width: 440px) {
+    .header {font-size: 30px;}
+    .container-fluid {width: 100vw;}
+    .arrow1 {width: 8px; height: 8px; margin-top: 10px; animation-name: slide1evenless;}
+    .arrow2 {width: 8px; height: 8px; margin-top: 7px; animation-name: slide2evenless;}
+    .help, .helptext {margin-left: 10px;}
 }

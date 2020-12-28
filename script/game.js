@@ -141,7 +141,7 @@ function handleGameOver(arr1, arr2, score1, score2) {
     } else { 
         $(winner_msg).text("Tie!");
     }
-    var button_col = $("<div>", {"class": "col-5"});
+    var button_col = $("<div>", {"class": "col-5 playbtn"});
     $(".buttons").append(button_col);
     var replay_button = $("<button>", {"class": "playagain", "onClick": "window.location.reload();"});
     $(replay_button).text("Play again");
